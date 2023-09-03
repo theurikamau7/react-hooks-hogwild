@@ -2,11 +2,49 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px */
+}
+
+.parent-container {
+  justify-content: space-between;
+  align-items: center;
+}
+.hog-container {
+  margin: 2rem auto;
+}
+
+.hog-img {
+  align-self: flex-start;
+  height: 75%;
+  width: 100%;
+
+  margin: 0 2rem 1rem 0;
+}
+.hog-img-container {
+  width: 100%;
+}
+.hideItems {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tile-container {
+  display: flex;
+  margin-bottom: 2rem;
+  max-width: 18rem;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  align-items: flex-start;
 }
 
 .App {
   margin: 0% 5% 0% 5%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .TwirlyPig {
@@ -27,7 +65,7 @@ body {
 }
 
 .headerText {
-  color: #F5A9BC;
+  color: #f5a9bc;
   font-size: 3em;
   margin: 0% 2% 0% 2%;
 }
@@ -35,18 +73,18 @@ body {
 .largeHeader {
   font-size: 3.5em;
   font-weight: bold;
-  color: #3B0B0B;
+  color: #3b0b0b;
 }
 
 .smallHeader {
   font-size: 1.75em;
   font-weight: bold;
-  color: #3B0B0B;
+  color: #3b0b0b;
 }
 
 .normalText {
   font-family: Georgia, serif;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .hoggyText {
@@ -64,20 +102,18 @@ ul {
 
 .normalText ul {
   font-family: Georgia, serif;
-  font-size: .75em;
+  font-size: 0.75em;
   text-align: left;
 }
 
 .subtleText {
-  color: #D1D1D1;
-  font-size: .75em;
+  color: #d1d1d1;
+  font-size: 0.75em;
 }
-
 
 .indexWrapper {
   margin: auto;
 }
-
 
 .pigTile {
   display: inline;
@@ -86,7 +122,7 @@ ul {
   float: left;
   margin: 2%;
   padding: 1%;
-  outline: #3B0B0B dotted thick;
+  outline: #3b0b0b dotted thick;
   transition: 0.75s;
   opacity: 1;
 }
@@ -109,7 +145,7 @@ ul {
 }
 
 .pigTile h3 {
-  color: #FBB;
+  color: #fbb;
 }
 
 .minPigTile {
@@ -128,18 +164,16 @@ ul {
   transform: scale(1.05);
 }
 
-
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .footer {
   padding: 1%;
   clear: both;
 }
-
 
 @keyframes App-logo-spin {
   from {
